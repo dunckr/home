@@ -7,31 +7,33 @@ module.exports = function(grunt) {
     grunt.initConfig({
         browserify: {
             build: {
-                src: ['app/coffee/**/*.js'],
+                src: ['app/coffee/**/*.coffee'],
                 dest: 'app/js/main.js'
             }
         },
-        watch: {
-            //css: {
-            //files: ['assets/sass/**/*'],
-            //tasks: ['compass']
-            //},
-            js: {
-                files: ['assets/coffee/**/*.coffee'],
-                tasks: ['browserify']
-            },
-            options: {
-                livereload: true
+        express: {
+            all: {
+                options: {
+                    port: 9000,
+                    hostname: "0.0.0.0",
+                    bases: ['app'],
+                    livereload: true
+                }
             }
         },
-        //watch: {
-        //browserify: {
-        //files: ['public/app/**/*.js'],
-        //tasks: ['browserify'],
-        //}
-        //}
+        watch: {
+            all: {
+                files: 'index.html',
+                options: {
+                    livereload: true
+                },
+            },
+            js: {
+                files: ['app/coffee/**/*.coffee'],
+                tasks: ['browserify']
+            }
+        }
     });
 
-    // Default task(s).
-    grunt.registerTask('default', ['browserify']);
+    grunt.registerTask('default', ['browserify', 'express', 'watch']);
 };
