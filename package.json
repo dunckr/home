@@ -1,33 +1,52 @@
 {
-  "name": "home",
-  "version": "0.0.1",
-  "private": true,
-  "devDependencies": {
-    "browserify-shim": "^3.6.0",
-    "coffeeify": "^0.6.0",
-    "grunt": "^0.4.5",
-    "grunt-browserify": "^2.1.3",
-    "grunt-contrib-compass": "^0.9.0",
-    "grunt-contrib-uglify": "^0.6.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-express": "^1.4.1",
-    "matchdep": "^0.3.0"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim",
-      "coffeeify"
-    ]
-  },
-  "browser": {
-    "jquery": "./node_modules/jquery/dist/jquery.js"
-  },
-  "browserify-shim": {
-    "jquery": {
-      "exports": "$"
+    "name": "home",
+    "version": "0.0.1",
+    "private": true,
+    "devDependencies": {
+        "browserify-shim": "^3.6.0",
+        "coffeeify": "^0.6.0",
+        "grunt": "^0.4.5",
+        "grunt-browserify": "^2.1.3",
+        "grunt-contrib-compass": "^0.9.0",
+        "grunt-contrib-uglify": "^0.6.0",
+        "grunt-contrib-watch": "^0.6.1",
+        "grunt-express": "^1.4.1",
+        "matchdep": "^0.3.0"
+    },
+    "browserify": {
+        "transform": [
+            "browserify-shim",
+            "coffeeify"
+        ]
+    },
+    "browser": {
+        "$": "./node_modules/jquery/dist/jquery.js",
+        "_": "./node_modules/underscore/underscore.js",
+        "Backbone": "./node_modules/backbone/backbone.js",
+        "Marionette": "./node_modules/backbone.marionette/lib/backbone.marionette.js"
+    },
+    "browserify-shim": {
+        "jquery": "$",
+        "underscore": "_",
+        "backbone": {
+            "exports": "Backbone",
+            "depends": [
+                "underscore:underscore"
+            ]
+        },
+        "backbone.marionette": {
+            "exports": "Marionette",
+            "depends": [
+                "jquery:jQuery",
+                "underscore:_",
+                "backbone:Backbone"
+            ]
+        }
+    },
+    "dependencies": {
+        "backbone": "^1.1.2",
+        "backbone.marionette": "^2.2.2",
+        "jquery": "^2.1.1",
+        "underscore": "^1.7.0"
     }
-  },
-  "dependencies": {
-    "jquery": "^2.1.1"
-  }
 }

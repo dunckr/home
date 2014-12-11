@@ -1,6 +1,7 @@
+$ = require "$"
+_ = require "_"
+Backbone = require "Backbone"
+Marionette = require "backbone.marionette"
 
-$ = require "jquery"
+console.log Marionette
 
-console.log "here", $("body")
-
-$("body").append("<h1>here</h1>")
