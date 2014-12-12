@@ -1,7 +1,11 @@
 $ = require "$"
 _ = require "_"
 Backbone = require "Backbone"
-Marionette = require "backbone.marionette"
+Marionette = require "Marionette"
+ViewInitializer = require "./initializers/example"
 
-console.log Marionette
-
+options =
+  test: "12"
+app = new Marionette.Application()
+app.addInitializer(ViewInitializer)
+app.start(config: options)

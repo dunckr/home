@@ -34,7 +34,7 @@
                 "underscore:underscore"
             ]
         },
-        "backbone.marionette": {
+        "Marionette": {
             "exports": "Marionette",
             "depends": [
                 "jquery:jQuery",
