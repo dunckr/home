@@ -1,11 +1,10 @@
 _          = require 'underscore'
 Backbone   = require 'backbone'
 Backbone.$ = require 'jquery'
-plugin     = require 'plugin'
 
-module.exports = Backbone.View.extend
+View = Backbone.View.extend
 
-  template: require './template'
+  template: require '../templates/template'
 
   initialize: ->
     underscoreTest = _.last([0,1,2, 'hi mom!'])
@@ -29,5 +28,4 @@ module.exports = Backbone.View.extend
         'Npm jquery'
         'Underscore (included with Backbone)'
       ]
-
-    plugin()
+module.exports = View
