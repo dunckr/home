@@ -6179,28 +6179,31 @@ header {
     font-weight: 100;
     color: #242A2E; }
 
-/* line 23, /Users/dunc/Sites/home/src/sass/custom */
-.sidebar li {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  border-left: 0;
-  border-right: 0; }
-/* line 31, /Users/dunc/Sites/home/src/sass/custom */
-.sidebar p {
-  padding-left: 20px;
-  font-weight: 400; }
-/* line 35, /Users/dunc/Sites/home/src/sass/custom */
-.sidebar .text-muted {
-  font-weight: 100; }
-/* line 38, /Users/dunc/Sites/home/src/sass/custom */
-.sidebar li:hover {
-  background-color: #242A2E; }
-  /* line 40, /Users/dunc/Sites/home/src/sass/custom */
-  .sidebar li:hover p {
-    color: white; }
+/* line 22, /Users/dunc/Sites/home/src/sass/custom */
+.sidebar {
+  overflow: scroll; }
+  /* line 24, /Users/dunc/Sites/home/src/sass/custom */
+  .sidebar li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 0;
+    border-right: 0; }
+  /* line 32, /Users/dunc/Sites/home/src/sass/custom */
+  .sidebar p {
+    padding-left: 20px;
+    font-weight: 400; }
+  /* line 36, /Users/dunc/Sites/home/src/sass/custom */
+  .sidebar .text-muted {
+    font-weight: 100; }
+  /* line 39, /Users/dunc/Sites/home/src/sass/custom */
+  .sidebar li:hover {
+    background-color: #242A2E; }
+    /* line 41, /Users/dunc/Sites/home/src/sass/custom */
+    .sidebar li:hover p {
+      color: white; }
 
-/* line 45, /Users/dunc/Sites/home/src/sass/custom */
+/* line 46, /Users/dunc/Sites/home/src/sass/custom */
 .container {
   background-color: #242A2E; }

@@ -13,7 +13,7 @@ Items = Backbone.Collection.extend
     Backbone.sync method, collection, options
 
   parse: (response) ->
-    response[..4]
-    #response
+    #response[..4]
+    response
 
 module.exports = Items

@@ -1,6 +1,6 @@
 _ = require 'underscore'
 Backbone = require 'backbone'
-Backbone.$ = require 'jquery'
+Backbone.$ = $ = require 'jquery'
 Marionette = require "backbone.marionette"
 Template = require "../templates/header"
 
@@ -10,5 +10,10 @@ class Header extends Marionette.ItemView
 
   initialize: ->
     @render()
+    @setScrollHeight()
+
+  setScrollHeight: ->
+    pageHeight = $(document).height()
+    $('.sidebar').css("height", "#{pageHeight}px")
 
 module.exports = Header
