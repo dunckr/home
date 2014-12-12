@@ -5,7 +5,7 @@ Marionette = require "backbone.marionette"
 ListItemView = require "./item"
 
 class Items extends Marionette.CollectionView
-  el: Backbone.$("#items")
+  el: "#items"
   childView: ListItemView
 
   initialize: ->
@@ -14,9 +14,7 @@ class Items extends Marionette.CollectionView
 
   success: (collection) =>
     @render()
-    console.log "we were successful", collection
 
   error: (collection, response) ->
-    console.log "we were successful", response
 
 module.exports = Items

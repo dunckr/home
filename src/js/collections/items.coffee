@@ -14,5 +14,6 @@ Items = Backbone.Collection.extend
 
   parse: (response) ->
     response[..4]
+    #response
 
 module.exports = Items
