@@ -1,7 +1,7 @@
 _ = require 'underscore'
 Backbone = require 'backbone'
 Backbone.$ = require 'jquery'
-Model = require "../models/post"
+Model = require "../models/item"
 
 class Posts extends Backbone.Collection
   model: Model

@@ -16,15 +16,6 @@ class CommentsView extends Marionette.CollectionView
     @channel = Channel
     @channel.on "item:clicked", (item) =>
       comments = new Comments(item.get("kids"))
-      #console.log "we have new comments", comments
-      #comment = comments.at(0)
-      #console.log comment
-      #@collection.add(comment)
-      #@render()
-      console.log comments.models
       @collection.reset(comments.models)
-      #
-  onRender: ->
-    console.log "re-rendered the comments view"
 
 module.exports = CommentsView
