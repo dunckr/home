@@ -6171,36 +6171,58 @@ body {
   float: right; }
 
 /* line 14, /Users/dunc/Sites/home/src/sass/custom */
+h3 {
+  font-weight: 100;
+  color: #C4CBD1; }
+
+/* line 18, /Users/dunc/Sites/home/src/sass/custom */
 header {
   text-align: center;
   padding-bottom: 20px; }
-  /* line 17, /Users/dunc/Sites/home/src/sass/custom */
-  header h3 {
-    font-weight: 100;
-    color: #242A2E; }
 
-/* line 23, /Users/dunc/Sites/home/src/sass/custom */
-.sidebar li {
+/* line 22, /Users/dunc/Sites/home/src/sass/custom */
+li {
   padding-top: 20px;
   padding-bottom: 20px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   border-left: 0;
   border-right: 0; }
-/* line 31, /Users/dunc/Sites/home/src/sass/custom */
-.sidebar p {
+
+/* line 30, /Users/dunc/Sites/home/src/sass/custom */
+p {
   padding-left: 20px;
   font-weight: 400; }
-/* line 35, /Users/dunc/Sites/home/src/sass/custom */
-.sidebar .text-muted {
-  font-weight: 100; }
-/* line 38, /Users/dunc/Sites/home/src/sass/custom */
-.sidebar li:hover {
-  background-color: #242A2E; }
-  /* line 40, /Users/dunc/Sites/home/src/sass/custom */
-  .sidebar li:hover p {
-    color: white; }
 
-/* line 45, /Users/dunc/Sites/home/src/sass/custom */
+/* line 34, /Users/dunc/Sites/home/src/sass/custom */
+.text-muted {
+  font-weight: 100; }
+
+/* line 37, /Users/dunc/Sites/home/src/sass/custom */
+.sidebar {
+  overflow: scroll; }
+  /* line 39, /Users/dunc/Sites/home/src/sass/custom */
+  .sidebar li:hover {
+    background-color: #C4CBD1; }
+    /* line 41, /Users/dunc/Sites/home/src/sass/custom */
+    .sidebar li:hover p {
+      color: white; }
+
+/* line 46, /Users/dunc/Sites/home/src/sass/custom */
 .container {
-  background-color: #242A2E; }
+  background-color: #C4CBD1; }
+
+/* line 49, /Users/dunc/Sites/home/src/sass/custom */
+.overlay {
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  right: 0;
+  height: 50%;
+  background-color: white;
+  width: 83%;
+  overflow: scroll; }
+
+/* line 60, /Users/dunc/Sites/home/src/sass/custom */
+#comments li {
+  padding-bottom: 30px; }
