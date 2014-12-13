@@ -1,10 +1,9 @@
 _ = require 'underscore'
 Backbone = require 'backbone'
 Backbone.$ = require 'jquery'
-Model = require "../models/item"
+Model = require "../models/post"
 
-Items = Backbone.Collection.extend
-
+class Posts extends Backbone.Collection
   model: Model
   url: "https://hacker-news.firebaseio.com/v0/topstories.json",
 
@@ -12,8 +11,4 @@ Items = Backbone.Collection.extend
     options.dataType = "jsonp"
     Backbone.sync method, collection, options
 
-  parse: (response) ->
-    #response[..4]
-    response
-
-module.exports = Items
+module.exports = Posts

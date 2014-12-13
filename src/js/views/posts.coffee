@@ -2,11 +2,10 @@ _ = require 'underscore'
 Backbone = require 'backbone'
 Backbone.$ = require 'jquery'
 Marionette = require "backbone.marionette"
-ListItemView = require "./item"
+PostItemView = require "./post"
 
-class Items extends Marionette.CollectionView
-  el: "#items"
-  childView: ListItemView
+class Posts extends Marionette.CollectionView
+  childView: PostItemView
 
   initialize: ->
     @collection.fetch({}, @success, @error)
@@ -17,4 +16,4 @@ class Items extends Marionette.CollectionView
 
   error: (collection, response) ->
 
-module.exports = Items
+module.exports = Posts

@@ -8,10 +8,15 @@ Template = require "../templates/panel"
 class Panel extends Marionette.ItemView
   el: "#panel"
   template: Template
+  ui:
+    comments: "#comments"
+  events:
+    "click": "toggleOverlay"
 
   initialize: ->
     @render()
-    @channel = Channel
-    @channel.on "item:clicked", (item) =>
+
+  toggleOverlay: =>
+    @$el.toggleClass("overlay")
 
 module.exports = Panel

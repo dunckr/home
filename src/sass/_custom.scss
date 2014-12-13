@@ -1,4 +1,4 @@
-$header:#242A2E;
+$header:#C4CBD1;
  body {
     font-family: 'Roboto', sans-serif;
 }
@@ -11,38 +11,53 @@ $header:#242A2E;
     padding-right: 30px;
     float: right;
 }
+h3 {
+    font-weight: 100;
+    color: $header;
+}
 header {
     text-align: center;
     padding-bottom: 20px;
-    h3 {
-        font-weight: 100;
-        color: $header;
-    }
+}
+li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 0;
+    border-right: 0;
+}
+p {
+    padding-left: 20px;
+    font-weight: 400;
+}
+.text-muted {
+    font-weight: 100;
 }
 .sidebar {
     overflow: scroll;
-    li {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        border-left: 0;
-        border-right: 0;
-    }
-    p {
-        padding-left: 20px;
-        font-weight: 400;
-    }
-    .text-muted {
-        font-weight: 100;
-    }
     li:hover {
         background-color: $header;
         p {
-            color: white;
+          color: white;
         }
     }
 }
 .container {
-  background-color: $header;
+    background-color: $header;
+}
+.overlay {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    background-color: white;
+    width: 84.5%;
+    overflow: scroll;
+}
+#comments {
+    li {
+      padding-bottom: 30px;
+    }
 }

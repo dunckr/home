@@ -3,9 +3,9 @@ Backbone = require 'backbone'
 Backbone.$ = require 'jquery'
 Marionette = require "backbone.marionette"
 Channel = require "../services/channel"
-Template = require "../templates/item"
+Template = require "../templates/comment"
 
-class Item extends Marionette.ItemView
+class Comment extends Marionette.ItemView
   template: Template
   tagName: "li"
   className: "list-group-item"
@@ -17,7 +17,4 @@ class Item extends Marionette.ItemView
   initialize: ->
     @channel = Channel
 
-  clicked: =>
-    @channel.trigger "item:clicked", @model
-
-module.exports = Item
+module.exports = Comment

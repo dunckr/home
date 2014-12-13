@@ -2,10 +2,7 @@ _ = require 'underscore'
 Backbone = require 'backbone'
 Backbone.$ = require 'jquery'
 
-Item = Backbone.Model.extend
-
-  defaults:
-    test: "123"
+class Comment extends Backbone.Model
 
   initialize: (@id) ->
     @fetch()
@@ -17,4 +14,4 @@ Item = Backbone.Model.extend
     options.dataType = "jsonp"
     Backbone.sync method, model, options
 
-module.exports = Item
+module.exports = Comment
